@@ -1,6 +1,6 @@
 <template>
     <table class="table">
-      <thead center border="1">
+      <thead center border="1" >
         <tr>
           <th>Gender</th>
           <th>Height</th>
@@ -11,13 +11,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="arrayTest in arraytests"  :key="arrayTest.id" >
-          <td>{{ arrayTest.gender }}</td>
-          <td>{{ arrayTest.height }}</td>
-          <td>{{ arrayTest.weight }}</td>
-          <td :style=" `color:${bmiColor[arrayTest.bmiKeyword]}`">{{ arrayTest.bmi }}</td>
-          <td :style=" `color:${bmiColor[arrayTest.bmiKeyword]}`">{{ arrayTest.bmiKeyword }}</td>
-         <td> <span @click="updateForm(arrayTest)">{{ arrayTest.view }}</span> </td>
+        <tr v-for="item in arraytests"  :key="item.id" >
+          <td>{{ item.gender }}</td>
+          <td>{{ item.height }}</td>
+          <td>{{ item.weight }}</td>
+          <td :style=" `color:${bmiColor[item.bmiKeyword]}`">{{ item.bmi }}</td>
+          <td :style=" `color:${bmiColor[item.bmiKeyword]}`">{{ item.bmiKeyword }}</td>
+         <td> <span clickable @click="updateForm(item)">{{ item.view }}</span> </td>
         </tr>
       </tbody>
     </table>

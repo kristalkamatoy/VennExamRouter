@@ -1,24 +1,32 @@
-import BMIForm from '../../components/BMIForm/BMIForm'
-import UpdateTable from '../../components/UpdateTable/UpdateTable'
+import BMIForm from "../../components/BMIForm/BMIForm";
+import UpdateTable from "../../components/UpdateTable/UpdateTable";
 
 export default {
-    data() {
-        return {
-            bmiColor: { "Underweight": "blue", "Normal weight": "Green", "Overweight": "Orange", "Obese": "Red" },
-            arrayTest: [{ gender: "", weight: "", height: "", bmi: "", bmiKeyword: "", view: "" }],
-            selectedRow: null
-        };
+  data() {
+    return {
+      bmiColor: {
+        Underweight: "blue",
+        "Normal weight": "Green",
+        Overweight: "Orange",
+        Obese: "Red",
+      },
+      arrayTest: [],
+    };
+  },
+  components: {
+    BMIForm,
+    UpdateTable,
+  },
+  methods: {
+    callUpdate(newBmi) {
+      this.arrayTest.push(newBmi);
+
+      if (this.arrayTest.length > 11) {
+        this.arrayTest.splice(1, 1);
+      }
     },
-    components: {
-        BMIForm,
-        UpdateTable
+    callUpdateForm(bmiObj) {
+      this.$refs.bmiForm.callUpdate(bmiObj);
     },
-    methods: {
-        callUpdate(arrayVal) {
-            this.arrayTest = arrayVal;
-        },
-        callUpdateForm(updateArray) {
-            this.selectedRow = updateArray;
-        }
-    }
-}
+  },
+};
