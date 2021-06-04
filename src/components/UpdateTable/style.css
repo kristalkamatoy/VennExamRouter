@@ -1,0 +1,49 @@
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 100%;
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-collapse: separate;
+    border: solid black 1px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+}
+
+table.table {
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+th,
+td {
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Create two equal columns that floats next to each other */
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
