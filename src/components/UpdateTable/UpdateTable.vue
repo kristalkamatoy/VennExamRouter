@@ -18,7 +18,7 @@
           <td>{{ item.weight }}</td>
           <td :style=" `color:${bmiColor[item.bmiKeyword]}`">{{ item.bmi }}</td>
           <td :style=" `color:${bmiColor[item.bmiKeyword]}`">{{ item.bmiKeyword }}</td>
-         <td> <span clickable @click="updateForm(item)">{{ item.view }}</span> </td>
+         <td> <span clickable @click="updateForm(item.id)">View Data</span> </td>
         </tr>
       </tbody>
     </table>

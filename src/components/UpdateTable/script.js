@@ -1,21 +1,21 @@
 export default {
-    props: ["arraytests"],
-    data() {
-        return {
-            bmiColor: {
-                Underweight: "blue",
-                "Normal weight": "Green",
-                Overweight: "Orange",
-                Obese: "Red",
-            },
-        };
+  props: ["arraytests"],
+  data() {
+    return {
+      bmiColor: {
+        Underweight: "blue",
+        "Normal weight": "Green",
+        Overweight: "Orange",
+        Obese: "Red",
+      },
+    };
+  },
+  methods: {
+    updateForm(id) {
+      this.$emit("updateForm", id);
     },
-    methods: {
-        updateForm(bmiObj) {
-            this.$emit("updateForm", bmiObj);
-        },
-    },
-    async created() {
-        this.$store.state.loadBMI
-    },
+  },
+  async created() {
+    this.$store.state.loadBMI;
+  },
 };
