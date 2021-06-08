@@ -2,7 +2,7 @@
     <div class="row">
   <div class="column">
   
-    <form>
+    <form id="bmiForm" >
     <h3 class="field">BMI Calculator</h3>
    
     <div class="field">   

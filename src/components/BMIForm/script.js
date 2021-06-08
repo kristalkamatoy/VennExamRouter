@@ -92,9 +92,9 @@ export default {
             this.gender = bmiObj.gender;
             this.cm = parseFloat(bmiObj.height.replace("cm", ""));
         },
-        clear() {
+        clear(e) {
+            e.preventDefault()
             this.kg = "";
-            this.gender = "";
             this.cm = "";
             this.localbmi = "";
         },
