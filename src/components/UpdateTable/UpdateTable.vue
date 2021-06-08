@@ -1,4 +1,5 @@
 <template>
+
     <table class="table">
       <thead center border="1" >
         <tr>

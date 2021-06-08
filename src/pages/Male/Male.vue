@@ -1,5 +1,9 @@
 <template>
   <div>
+    <div id="mySidenav">
+      <router-link id="Dashboard" tag="span" style="color: Black;" to="/">Dashboard</router-link> 
+      <span id="Clear" @click="clearData">Clear</span>
+    </div>
     <BMIForm @updateValue="callUpdate" gender="Male" ref="bmiForm" />
     <UpdateTable
       v-if="arrayTest.length > 0"

@@ -30,3 +30,34 @@ button {
     background-color: blue;
     color: white;
 }
+
+#mySidenav {
+    margin-bottom: 150px;
+}
+
+#mySidenav span {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+}
+
+#mySidenav span:hover {
+    left: 0;
+}
+
+#Dashboard {
+    top: 20px;
+    background-color: #04AA6D;
+    color: white;
+}
+
+#Clear {
+    top: 80px;
+    background-color: #2196F3;
+}

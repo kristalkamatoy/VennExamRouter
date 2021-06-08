@@ -3,7 +3,6 @@
   <div class="column">
   
     <form>
-
     <h3 class="field">BMI Calculator</h3>
    
     <div class="field">   
@@ -45,10 +44,10 @@
         <label :style=" `color:${bmiColor[bmi]}`">{{ this.localbmi }} ({{ this.bmi }})</label>
     </div>
     </div>
-        <div class="field">
+
         <button @click="submit">Save</button>
          <button @click="clear">Clear</button>
-    </div>
+
   </form>
   </div>
   <div class="column">
